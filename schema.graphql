@@ -15,6 +15,8 @@ type Deposit @entity {
   sharesReceived: BigInt!
   "Address of the depositor."
   depositor: Bytes!
+  "Timestamp that this event was emitted."
+  timestamp: BigInt!
 }
 
 """
@@ -35,6 +37,8 @@ type Withdrawal @entity {
   fee: BigInt!
   "Address that receives the fee."
   feeTo: Bytes!
+  "Timestamp that this event was emitted."
+  timestamp: BigInt!
 }
 
 """

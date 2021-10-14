@@ -41,6 +41,7 @@ export function handleDeposit(event: Deposit): void {
   deposit.asset = ep.asset
   deposit.sharesReceived = ep.sharesReceived
   deposit.depositor = ep.depositor
+  deposit.timestamp = ep._event.block.timestamp
 
   deposit.save()
 }
@@ -60,6 +61,7 @@ export function handleWithdrawal(event: Withdraw): void {
   withdraw.withdrawer = ep.withdrawer
   withdraw.fee = ep.fee
   withdraw.feeTo = ep.feeTo
+  withdraw.timestamp = ep._event.block.timestamp
 
   withdraw.save()
 }

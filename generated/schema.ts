@@ -21,6 +21,7 @@ export class Deposit extends Entity {
     this.set("asset", Value.fromBytes(Bytes.empty()));
     this.set("sharesReceived", Value.fromBigInt(BigInt.zero()));
     this.set("depositor", Value.fromBytes(Bytes.empty()));
+    this.set("timestamp", Value.fromBigInt(BigInt.zero()));
   }
 
   save(): void {
@@ -84,6 +85,15 @@ export class Deposit extends Entity {
   set depositor(value: Bytes) {
     this.set("depositor", Value.fromBytes(value));
   }
+
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
+    return value!.toBigInt();
+  }
+
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
+  }
 }
 
 export class Withdrawal extends Entity {
@@ -97,6 +107,7 @@ export class Withdrawal extends Entity {
     this.set("withdrawer", Value.fromBytes(Bytes.empty()));
     this.set("fee", Value.fromBigInt(BigInt.zero()));
     this.set("feeTo", Value.fromBytes(Bytes.empty()));
+    this.set("timestamp", Value.fromBigInt(BigInt.zero()));
   }
 
   save(): void {
@@ -177,6 +188,15 @@ export class Withdrawal extends Entity {
 
   set feeTo(value: Bytes) {
     this.set("feeTo", Value.fromBytes(value));
+  }
+
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
+    return value!.toBigInt();
+  }
+
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
   }
 }
 
