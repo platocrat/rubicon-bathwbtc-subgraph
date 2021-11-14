@@ -1,13 +1,13 @@
 {
-  "name": "rubicon-bathwbtc-subgraph",
+  "name": "rubicon-bathwbtc",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ platocrat/rubicon-bathwbtc-subgraph",
-    "create-local": "graph create --node http://localhost:8020/ rubicon-bathwbtc-subgraph",
-    "remove-local": "graph remove --node http://localhost:8020/ rubicon-bathwbtc-subgraph",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 rubicon-bathwbtc-subgraph"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ platocrat/rubicon-bathwbtc",
+    "create-local": "graph create --node http://localhost:8020/ rubicon-bathwbtc",
+    "remove-local": "graph remove --node http://localhost:8020/ rubicon-bathwbtc",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 rubicon-bathwbtc"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.22.2",
